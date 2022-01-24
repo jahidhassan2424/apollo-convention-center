@@ -22,6 +22,10 @@
 
     <!-- Custom Css Media Query -->
     <style>
+        #our-package {
+            margin-top: 5rem;
+        }
+
         @media only screen and (max-width:767px) {
 
             .card-3 {
@@ -67,7 +71,7 @@
     </style>
 </head>
 
-<body style="font-family: 'Roboto', sans-serif;">
+<body style="font-family: 'Roboto', sans-serif; ">
     <header>
         <nav class="navbar navbar-light bg-light">
             <div class="container d-flex align-items-center mt-2">
@@ -77,7 +81,7 @@
     </header>
     <main>
         <!-- Top Slider Starts -->
-        <section class="container mb-5 ">
+        <section class="container-fluid mb-5 ">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -138,8 +142,8 @@
         </section>
 
         <!-- Our Package Section -->
-        <section class="container my-5 px-5">
-            <h2 class="text-center my-5">Our Package</h2>
+        <section class="container my-5 px-5" style="">
+            <h2 id="our-package" class="text-center ">Our Package</h2>
             <div class="row d-flex" style="margin-top: 170px;">
                 <div class="col-sm-12 col-lg-3 px-3 ">
                     <div class="card p-4 border-0">
@@ -179,7 +183,7 @@
                 <div class="col-sm-12 col-lg-3 px-4  " style="margin-top: -80px;">
 
                     <div class=" card card-3 text-light p-4 "
-                        style="background-color: rgb(63, 135, 245); border-radius: 26px;box-shadow: 0px 42px 34px rgba(63, 135, 245, 0.25); ">
+                        style="background-color: rgb(63, 135, 245); border-radius: 26px; box-shadow: 0px 42px 34px rgba(63, 135, 245, 0.25); ">
                         <span> <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger"
                                 style="right:10px ;">
                                 Best</span>
@@ -218,9 +222,20 @@
                                 plan</button></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
+
+        </section>
+        <div class="show toast align-items-center text-white bg-primary border-0 ms-auto" role="alert"
+            aria-live="assertive" aria-atomic="true"
+            style="position: absolute; right:0%; 0px 20px 34px rgba(63, 135, 245, 0.25);">
+            <div class="d-flex ">
+                <div class="toast-body">
+                    <i class="fas fa-gift"></i><span>&nbsp;</span>Book Now and Get 20% off.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
         <!-- 3rd Section -->
         <section class="container">
 
@@ -309,8 +324,19 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
 
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
     <footer class="container-fluid bg-dark">
         <div class="d-flex justify-content-between align-items-center">
             <div class="footer-manual container d-flex justify-content-between align-items-center p-5">
@@ -337,8 +363,21 @@
 
     </footer>
 
+    <script>
+        $('#element').toast('show')
+        $('.toast').toast('show');
+        data - autohide="false";
 
+        window.onload = (event) => {
+            let myAlert = document.querySelectorAll('.toast');
+            let bsAlert = new bootstrap.Toast(myAlert);
+            bsAlert.show();
+
+        }</script>
     <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
 </body>
 
 </html>
