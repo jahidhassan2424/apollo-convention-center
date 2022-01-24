@@ -19,19 +19,65 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/31759f3638.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Css Media Query -->
+    <style>
+        @media only screen and (max-width:767px) {
+
+            .card-3 {
+                margin-top: 5rem;
+                margin-bottom: 3rem;
+            }
+
+            .faq-accordian {
+                order: 2;
+                margin-bottom: 2rem;
+            }
+
+            .faq-img {
+                order: 1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-manual {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .footer-left {
+                order: 2;
+                margin-top: 3rem;
+            }
+
+            .footer-right {
+                order: 1;
+
+            }
+
+        }
+
+        @media only screen and (min-width:992px) {
+            .faq-img-inside {
+                padding: 3rem
+            }
+
+        }
+    </style>
 </head>
 
 <body style="font-family: 'Roboto', sans-serif;">
     <header>
         <nav class="navbar navbar-light bg-light">
-            <div class="container">
+            <div class="container d-flex align-items-center mt-2">
                 <span class="navbar-brand mb-0 h1 px-5 pb-4">Apollo Convention Center</span>
             </div>
         </nav>
     </header>
     <main>
         <!-- Top Slider Starts -->
-        <section class="container mb-5">
+        <section class="container mb-5 ">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -47,8 +93,9 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Your Reliable Friend</h5>
                             <p>We take responsibility about your event it's a commitment.</p>
-                            <button class="btn btn-primary btn-light text-primary px-4 rounded ">Book
-                                Now</button>
+                            <a href="https://www.imo.es/en/imo-convention-center"><button
+                                    class="btn btn-primary btn-light text-primary px-4 rounded ">Book
+                                    Now</button></a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -59,8 +106,9 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Best Event Management Team</h5>
                             <p>We have skilled worker who will take care of your event.</p>
-                            <button class="btn btn-primary btn-light text-primary px-4 rounded ">Book
-                                Now</button>
+                            <a href="https://www.imo.es/en/imo-convention-center"><button
+                                    class="btn btn-primary btn-light text-primary px-4 rounded ">Book
+                                    Now</button></a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -70,8 +118,9 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Get The Lowest Rate</h5>
                             <p>let's make a new friendship, Book now.</p>
-                            <button class="btn btn-primary btn-light text-primary px-4 rounded ">Book
-                                Now</button>
+                            <a href="https://www.imo.es/en/imo-convention-center"><button
+                                    class="btn btn-primary btn-light text-primary px-4 rounded ">Book
+                                    Now</button></a>
                         </div>
                     </div>
                 </div>
@@ -91,8 +140,8 @@
         <!-- Our Package Section -->
         <section class="container my-5 px-5">
             <h2 class="text-center my-5">Our Package</h2>
-            <div class="d-flex" style="margin-top: 170px;">
-                <div class="col-lg-3 px-3 ">
+            <div class="row d-flex" style="margin-top: 170px;">
+                <div class="col-sm-12 col-lg-3 px-3 ">
                     <div class="card p-4 border-0">
 
                         <h3 class="mb-4">$300</h3>
@@ -109,7 +158,7 @@
                                 plan</button></a>
                     </div>
                 </div>
-                <div class="col-lg-3 px-3 ">
+                <div class="col-sm-12 col-lg-3 px-3 ">
                     <div class="card p-4 border-0">
                         <h3 class="mb-4">$500</h3>
                         <h4>wedding basic</h4>
@@ -127,9 +176,9 @@
                 </div>
                 <!-- Card-3 -->
 
-                <div class="col-lg-3 px-4 " style="margin-top: -80px;">
+                <div class="col-sm-12 col-lg-3 px-4  " style="margin-top: -80px;">
 
-                    <div class=" card card-3  text-light p-4 "
+                    <div class=" card card-3 text-light p-4 "
                         style="background-color: rgb(63, 135, 245); border-radius: 26px;box-shadow: 0px 42px 34px rgba(63, 135, 245, 0.25); ">
                         <span> <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger"
                                 style="right:10px ;">
@@ -153,7 +202,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3 px-3 ">
+                <div class="col-sm-12 col-lg-3 px-3 ">
                     <div class="card p-4 border-0">
                         <h3 class="mb-4">$1200</h3>
                         <h4>Corporate event</h4>
@@ -182,7 +231,7 @@
             <h3 class="text-center my-5">Frequently Asked Question</h1>
 
                 <div class="row flex align-items-center ">
-                    <div class="col-lg-6 ">
+                    <div class="col-sm-12 col-lg-6 faq-accordian ">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
@@ -252,8 +301,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <img class="p-5" width="90%" src="images/people.png" alt="Image of a group of people.">
+                    <div class=" col-sm-12 col-lg-6 text-end faq-img">
+                        <img class="faq-img-inside" width="100%" src="images/people.png"
+                            alt="Image of a group of people.">
                     </div>
                 </div>
         </section>
@@ -263,20 +313,23 @@
 
     <footer class="container-fluid bg-dark">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="text-light">
-                <p>© 2020 bike. All rights reserved</p>
-            </div>
-            <div class="d-flex justify-content-end pe-5 pb-5 pt-5">
-                <div>
-                    <h4 class="text-light">Get the App</h4>
-                    <div class="my-2">
-                        <a href="https://apps.apple.com/us/app/neptune-for-twitter/id1506841953"><img width="135px"
-                                height="40px" src="images/app-store-png-logo-33116.png" alt=""></a>
+            <div class="footer-manual container d-flex justify-content-between align-items-center p-5">
+                <div class="text-light footer-left">
+                    <p>© 2020 bike. All rights reserved</p>
+                </div>
+                <div class="footer-right d-flex justify-content-end ">
+                    <div>
+                        <h4 class="text-light">Get the App</h4>
+                        <div class="my-2">
+                            <a href="https://apps.apple.com/us/app/neptune-for-twitter/id1506841953"><img width="135px"
+                                    height="40px" src="images/app-store-png-logo-33116.png" alt=""></a>
 
-                    </div>
-                    <div class="mb-2">
-                        <a href="https://play.google.com/store/apps/details?id=learn.programming.courses&hl=en&gl=US"><img
-                                width="135px" height="40px" src="images/google-play-badge.png" alt=""></a>
+                        </div>
+                        <div class="">
+                            <a
+                                href="https://play.google.com/store/apps/details?id=learn.programming.courses&hl=en&gl=US"><img
+                                    width="135px" height="40px" src="images/google-play-badge.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
